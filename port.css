@@ -50,12 +50,10 @@ nav ul li a:hover{
 nav a.active{
     color:#f9004d;
 }
-#checkbtn{
+#menu-icon{
     font-size: 25px; 
     color: white; 
-    float: left; 
-    line-height: 65px;
-    margin-left: 40px;
+    z-index: 10001;
     display: none;
     cursor: pointer; 
 }
