@@ -3,14 +3,10 @@
     margin: 0;
     font-family: 'Josefin Sans', sans-serif;
     box-sizing: border-box;
+    list-style: none; 
+    scroll-behavior: smooth; 
 }
-.hero{
-    height: 100vh;
-    width: 100%; 
-    background-image: url(finalback.png);
-    background-size: cover;
-    background-position: center; 
-}
+
 nav{
     display: flex; 
     align-items: center;
@@ -19,13 +15,21 @@ nav{
     padding-left: 8%;
     padding-right: 8%;
 }
+
+.hero{
+    height: 100vh;
+    width: 100%; 
+    background-image: url(finalback.png);
+    background-size: cover;
+    background-position: center; 
+}
 .logo{
     font-size: 40px;
     letter-spacing: 1px;
     color: white;
     cursor: pointer;
 }
-span{
+#red{
     color: #f9004d;
 }
 nav ul li{
@@ -42,6 +46,44 @@ nav ul li a{
 nav ul li a:hover{
     color: #f9004d; 
     transition: .4s;
+}
+nav a.active{
+    color:#f9004d;
+}
+#checkbtn{
+    font-size: 25px; 
+    color: white; 
+    float: left; 
+    line-height: 65px;
+    margin-left: 40px;
+    display: none;
+    cursor: pointer; 
+}
+#check{
+    display: none;
+}
+@media(max-width: 744px){
+    #checkbtn{
+        display: block;
+    }
+    .navbar{
+        position: absolute; 
+        top: 5%;
+        right: -100%; 
+        width: 270px; 
+        height: 29vh; 
+        background: #ff7676;
+        display: flex; 
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+    }
+   .navbar.open{
+    right: 2%;   
+   }
+
+   
 }
 .btn{
     background-color: #f9004d;
@@ -168,6 +210,7 @@ margin-bottom: 45px;
 .service{
     background: #101010;
     width: 100%;
+    height: 500px;
     padding: 100px 0px;
 }
 .title h2{
@@ -195,7 +238,52 @@ margin-bottom: 45px;
     font-size: 30px;
     color: #cbaacb;
 }
+.link:hover{
+    color:#966FD6;
+}
 
 #insta{
     color: #fb3958;
+}
+.contact-me{
+    width: 100%;
+    height: 300px;
+    background: #353839;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
+.contact-me p{
+    color: white; 
+    font-size: 3rem; 
+    font-weight: bold; 
+    margin-bottom: 2rem;
+}
+.hire-me{
+    text-decoration: none; 
+    color: white; 
+    background-color: #f9004d;
+    padding: 14px 25px;
+    border: 2px solid #f9004d; 
+    border-radius: 30px;
+    font-weight: bold;
+    transition: .4s;
+}
+.hire-me:hover{
+    background-color: transparent; 
+    transform: scale(1.2); 
+}
+.footer{
+    width: 100%; 
+    height: 100px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    background-color: #353839;
+}
+.footer p{
+    color: #f9004d;
+    font-size: 14px;
 }
