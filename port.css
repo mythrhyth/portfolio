@@ -59,55 +59,6 @@ nav a.active{
 #click{
     display: none;
 }
-
-@media(max-width: 744px){
-    .menu-btn{
-        display: block;
-        float: right; 
-        
-    }
-    #click:checked ~ .menu-btn i:before{
-        content: "\f00d";
-    }
-    .btn{
-        display: none;
-    }
-
-    nav ul{
-        position: fixed; 
-        z-index: 1;
-        top: 15%;
-        left: -100%; 
-        width: 100%; 
-        height: 100vh; 
-        background-color: #1f213a;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        text-align: center;
-        border-radius: 10px;
-        transition: all .40s ease;
-    } 
-   nav ul li{
-    margin-top: 30px; 
-    margin-bottom: 20px;
-    font-size: 20px;
-   }
-   #click:checked ~ ul{
-    left: 0;
-   } 
-   .about img{
-    height: auto;
-    width: 130px; 
-    padding: 2px;
-}
-.about-text{
-    width: 250px;
-    padding: 25px;
-    
-}
-
-}
 .btn{
     background-color: #f9004d;
     color: white;
@@ -174,6 +125,7 @@ h4{
 .newslatter form input:last-child:hover{
     transform: scale(1.05);
 }
+/*about section starts */
 .about{
     width: 100%; 
     padding: 100px 0px;
@@ -200,6 +152,8 @@ h4{
     text-transform: capitalize;
     margin-bottom: 20px; 
 }
+
+/*text animation*/
 .about-text h5{
     color:white;
     font-size: 22px;
@@ -207,6 +161,24 @@ h4{
     text-transform: capitalize;
     margin-bottom: 25px;
 }
+span#work:before{
+    content: "";
+    position: absolute; 
+    height: 5%;
+    width: 15%; 
+    background-color: #191919;
+    border-left: 2px solid white;
+    animation: animate 4s steps(12) infinite; 
+}
+@keyframes animate{
+    from{
+        left: 810px;
+    }
+    to{
+        left: 970px;
+    }
+}
+
 .about-text p{
 color: #fcfc;
 letter-spacing: 1px;
@@ -310,6 +282,96 @@ margin-bottom: 45px;
     color: #f9004d;
     font-size: 14px;
 }
+/*responsive nav bar*/
+@media(max-width: 744px){
+    .menu-btn{
+        display: block;
+        float: right; 
+        
+    }
+    #click:checked ~ .menu-btn i:before{
+        content: "\f00d";
+    }
+    .btn{
+        display: none;
+    }
+
+    nav ul{
+        position: fixed; 
+        z-index: 1;
+        top: 15%;
+        left: -100%; 
+        width: 100%; 
+        height: 100vh; 
+        background-color: #1f213a;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+        border-radius: 10px;
+        transition: all .40s ease;
+    } 
+   nav ul li{
+    margin-top: 30px; 
+    margin-bottom: 20px;
+    font-size: 20px;
+   }
+   #click:checked ~ ul{
+    left: 0;
+   } 
+   .about img{
+    height: auto;
+    width: 130px; 
+    padding: 2px;
+}
+.about-text{
+    width: 250px;
+    padding: 25px;
+    
+}
+}
+/*responsive newslatter and form*/
+@media(max-width: 744px){
+    .content h4{
+        font: 40px;
+    }
+    .content h1{
+        font-size: 65px;
+    }
+    .content h3{
+        font-size: 16px;
+    }
+    .newslatter form{
+        width: 300px;
+    }
+}
+/*responsive about-me*/
+@media(max-width: 700px){
+    .about-text h2{
+        font-size: 45px; 
+    }
+    .about-text h5{
+        font-size: 20px;
+    }
+    .about-text p{
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .box i{
+        font-size: 25px;
+    }
+    .box a{
+        font-size: 12px;
+    }
+    .title h2{
+        font-size: 35px;
+    }
+    .service{
+        height: 50vh;
+    }
+}
+
+/*responsive services*/
 @media(max-width: 744px) {
     .service{
         background: #101010;
@@ -321,7 +383,7 @@ margin-bottom: 45px;
         display: flex; 
         justify-content: center;
         width: 100%;
-        font-size: 65px; 
+        font-size: 45px; 
         margin: 20px auto;
         text-align: center;
         padding-left: 50px;
@@ -355,5 +417,5 @@ margin-bottom: 45px;
         font-size: 30px;
         text-align: center;
     }
-
+   
 }
