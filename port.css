@@ -78,6 +78,7 @@ nav a.active{
     position: absolute; 
     top: 50%; 
     left: 8%; 
+    padding-top: 24px;
     transform: translateY(-50%);
 }
 h1{
@@ -108,7 +109,7 @@ h4{
     outline: none; 
     border-radius: 30px;
 }
-.newslatter form input:last-child{
+.newslatter form button{
     position: absolute;
     display: inline-block;
     outline: none; 
@@ -125,6 +126,50 @@ h4{
 .newslatter form input:last-child:hover{
     transform: scale(1.05);
 }
+.container{
+    width: 75%; 
+    height: 32vh;
+    background: white; 
+    border: 2px solid #f9004d;
+    border-radius: 13px;
+    top: 0; 
+    left: 50%;
+    transform: translate(70%, -10%) scale(0.1);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s; 
+}
+.open-popup{
+    visibility: visible; 
+    transform: translate(70%, -10%) scale(1);
+}
+.popup button{
+    padding: 10px 0px 10px; 
+    font-size: 18px; 
+    font-weight: 500;
+    width: 100%; 
+    border: none; 
+    outline: none; 
+    cursor: pointer;
+    background: #f9004d;
+    color: white;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+.popup{
+    margin: 2px 5px 2px 5px;
+    position: absolute;
+    text-align: center;
+    
+}
+.popup img{
+    width: 100px;
+    margin-top: -10%;
+    
+}
+.popup h2, p{ 
+    margin: 2px 0 10px; 
+}
+
 /*about section starts */
 .about{
     width: 100%; 
@@ -309,7 +354,6 @@ margin-bottom: 45px;
         justify-content: flex-start;
         text-align: center;
         border-radius: 10px;
-        transition: all .40s ease;
     } 
    nav ul li{
     margin-top: 30px; 
@@ -343,6 +387,19 @@ margin-bottom: 45px;
     }
     .newslatter form{
         width: 300px;
+    }
+}
+/*responsive popup let's go*/
+@media(max-width: 700px){
+
+    .open-popup{
+        visibility: visible; 
+        transform: translate(20%, -10%) scale(1);
+    }
+    .popup img{
+        width: 80px;
+        margin-top: -10%;
+        
     }
 }
 /*responsive about-me*/
@@ -419,4 +476,3 @@ margin-bottom: 45px;
     }
    
 }
-

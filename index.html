@@ -41,8 +41,17 @@
     <div class = "newslatter">
         <form>
             <input type = "email" name = "email" id="email" placeholder = "enter your email">
-            <input type = "submit" name = "submit" value = "Let's Go!">
+            <button type= "button" onclick="openPopup()">Let's Go! </button>
         </form>
+        <div class="container" id="popup">
+            <div class="popup">
+                <img src ="pngegg.png">
+                <h2>Thank You!</h2>
+                <p>Your email has successfully been sent. You'll be notified about this website through your email.</p>
+                <button type = "button" onclick="closePopup()">OK</button>
+            </div>
+        </div>
+        
     </div>
 </div>
 <!--About section-->

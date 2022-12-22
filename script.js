@@ -1,3 +1,4 @@
+/*text animation*/
 const text = document.querySelector("#work"); 
 const textLoad = () => {
     setTimeout(() => {
@@ -18,4 +19,13 @@ const textLoad = () => {
 }
 textLoad();
 setInterval(textLoad, 20000);
+
+/*to open popup on click let's Go!*/
+let popup = document.getElementById("popup");
+function openPopup(){
+    popup.classList.add("open-popup"); 
+}
+function closePopup(){
+    popup.classList.remove("open-popup"); 
+}
 
